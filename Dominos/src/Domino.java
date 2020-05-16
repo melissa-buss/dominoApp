@@ -13,7 +13,7 @@ public class Domino {
     }
     
     public String displayDomino(){
-        return left + " - " + right;
+        return "|" + left + " - " + right + "|";
     }
     
     public int getLeft(){

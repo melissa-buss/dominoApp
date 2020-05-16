@@ -1,0 +1,42 @@
+Version 3.0 - 5/15/20
+Needs user interaction for game (i.e. play against computers)
+Needs three and four player game functionality
+Method to determine whether a domino list is empty added
+Created choose domino method from hand for game added
+Two player game functionality added
+Method to choose random domino added (for draw method and player hand creation)
+Modified displayDomino method for readability
+Method to add face value of all dominos in a hand added
+Method to draw another domino added
+Standard documentation added
+User input for number of players added
+User input for domino set size added
+Domino set and player sets moved to individual methods
+Program creates and prints player hands
+Program creates Domino 
+Created accessors and other necessary methods to use the Domino object
+Created Domino object
+Created Domino class
+
+
+Version 2.0 - 5/13/20
+Standard documentation added
+User input for number of players added
+User input for domino set size added
+Domino set and player sets moved to individual methods
+Program creates and prints player hands
+Program creates Domino 
+Created accessors and other necessary methods to use the Domino object
+Created Domino object
+Created Domino class
+
+
+Version 1.0 - 5/11/20
+Program creates and prints player hands
+Program creates Domino 
+Created accessors and other necessary methods to use the Domino object
+Created Domino object
+Created Domino class
+
+
+
