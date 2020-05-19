@@ -24,6 +24,15 @@ public class Domino {
         return right;
     }
     
+    public boolean isDouble() {
+    	if (this.getLeft() == this.getRight()){
+    		return true;
+    	}
+    	else {
+    		return false;
+    	}
+    }
+    
     public void rotateDomino(){
         int temp = left;
         left = right;

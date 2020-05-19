@@ -1,3 +1,31 @@
+Version 3.1 - 5/18/20
+Game modified to allow the player a second discard if they play a double
+Method to determine if the domino is a double added
+Methods for each existing game option created
+Method to pick different game options created
+Two player game with one user and one computer added
+Method added to allow user to choose domino from their hand
+Domino choosing method modified to specify computer player functionality, intented to be separate from the user choice option 
+Needs user interaction for game (i.e. play against computers)
+Needs three and four player game functionality
+Method to determine whether a domino list is empty added
+Created choose domino method for game play
+Two player game functionality added
+Method to choose random domino added (for draw method and player hand creation)
+Modified displayDomino method for readability
+Method to add face value of all dominos in a hand added
+Method to draw another domino added
+Standard documentation added
+User input for number of players added
+User input for domino set size added
+Domino set and player sets moved to individual methods
+Program creates and prints player hands
+Program creates Domino 
+Created accessors and other necessary methods to use the Domino object
+Created Domino object
+Created Domino class
+
+
 Version 3.0 - 5/15/20
 Needs user interaction for game (i.e. play against computers)
 Needs three and four player game functionality
