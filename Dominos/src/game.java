@@ -1,6 +1,15 @@
 import java.util.ArrayList;
 import java.util.Random;
 
+
+/**
+ * 
+ * 
+ * @author Melissa Buss
+ * @version 4.1
+ * @since 5/29/20
+ *
+ */
 public class game {
 	ArrayList<Domino> dominoSet;
 	ArrayList<Domino> playerOne;
@@ -15,7 +24,7 @@ public class game {
 	 * @param s	The size of the set of dominos
 	 */
 	public game(int s) {
-		dominoSet = createDominoSet(s);
+		createDominoSet(s);
 	}
 	
 	/**
@@ -34,6 +43,20 @@ public class game {
 	 */
 	public void setDominoSet(ArrayList<Domino> s) {
 		this.dominoSet = s;
+	}
+	
+	/**
+	 * Creates the complete set of dominos using the user-determined size
+	 * 
+	 * @param numInSet 	The size of the set
+	 */
+	public void createDominoSet(int numInSet){
+		dominoSet = new ArrayList<Domino>();
+        for (int i = 0; i <= numInSet; i++){
+            for (int j= i; j <= numInSet; j++){
+                dominoSet.add(new Domino(i, j));
+            }
+        }
 	}
 	
 	/**
@@ -91,6 +114,20 @@ public class game {
 	}
 	
 	/**
+	 * Returns a value determining if the game has 3 players
+	 * 
+	 * @return Whether the game has 3 players or not
+	 */
+	public boolean hasPlayerThree() {
+		if (playerThree == null) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	
+	/**
 	 * Accesses player four's domino set
 	 * 
 	 * @return Player four's domino set
@@ -106,6 +143,20 @@ public class game {
 	 */
 	public void setPlayerFour(ArrayList<Domino> p) {
 		this.playerFour = p;
+	}
+	
+	/**
+	 * Returns a value determining if the game has 4 players
+	 * 
+	 * @return Whether the game has 4 players or not
+	 */
+	public boolean hasPlayerFour() {
+		if (playerFour == null) {
+			return false;
+		}
+		else {
+			return true;
+		}
 	}
 	
 	/**
@@ -125,26 +176,7 @@ public class game {
 	public void setGameTrack(ArrayList<Domino> t) {
 		this.gameTrack = t;
 	}
-	
-	
-	/**
-	 * Creates the complete set of dominos using the user-determined size
-	 * 
-	 * @param numInSet 	The size of the set
-	 * @return 			The ArrayList of dominos
-	 */
-	public static ArrayList<Domino> createDominoSet(int numInSet){
-		ArrayList<Domino> completeDominoSet = new ArrayList<>();
-        
-        for (int i = 0; i <= numInSet; i++){
-            for (int j= i; j <= numInSet; j++){
-                completeDominoSet.add(new Domino(i, j));
-            }
-        }
-        
-        return completeDominoSet;
-	}
-	
+		
 	/**
 	 * Prints set to the screen for user to see.
 	 * 
@@ -154,6 +186,22 @@ public class game {
 		for (int i = 0; i < s.size(); i++){
             System.out.print(s.get(i).displayDomino() + "   ");
         }
+		System.out.println();
+	}
+	
+	/**
+	 * Prints the last five elements in an array list, used to print the game track during play.
+	 * 
+	 * @param s Array list being printed
+	 */
+	public static void printLastFive(ArrayList<Domino> s) {
+		for (int i = 5; i > 0; i--) {
+			try {
+				System.out.print(s.get(s.size() - i).displayDomino() + "   ");
+			} catch ( IndexOutOfBoundsException e ) {
+			    continue;
+			}
+		}
 		System.out.println();
 	}
 	
@@ -178,7 +226,7 @@ public class game {
 	 * @param s 		The set of dominos that are not yet drawn
 	 * @return 			The player's hand
 	 */
-	public ArrayList<Domino> playerHand(int numInHand, ArrayList<Domino> s) {
+	public ArrayList<Domino> createPlayerHand(int numInHand, ArrayList<Domino> s) {
 		ArrayList<Domino> p = new ArrayList<>();
 		
         int i = 0;
@@ -196,7 +244,7 @@ public class game {
 	 * @param s		ArrayList being checked
 	 * @return 		boolean value determining whether the ArrayList is empty or not 
 	 */
-	public static boolean isEmpty(ArrayList<Domino> s) {
+	public boolean isEmpty(ArrayList<Domino> s) {
 		if (s.size() == 0) {
 			return false;
 		}
@@ -210,11 +258,9 @@ public class game {
 	 * 
 	 * @param p 	Players hand
 	 * @param s 	Set of undrawn dominos
-	 * @return 		Players updated hand
 	 */
-	public ArrayList<Domino> draw(ArrayList<Domino> p, ArrayList<Domino> s){
+	public void draw(ArrayList<Domino> p, ArrayList<Domino> s){
 		p.add(chooseRandomDomino());
-		return p;
 	}
     
 	

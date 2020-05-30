@@ -1,3 +1,44 @@
+Version 4.1 - 5/29/20
+Created mexican train class and created the constructor, accessors, and mutators
+Various changes to simplify code, such as removal of unnecessary parameters
+Added a method to print only the last 5 dominos in a set, meant for better readability during gameplay
+Method created to check if a user has moves, preventing them from drawing when they don't need to
+Added two methods to determine if the game has a player 3 or 4, allowing certain methods to be used for any game size
+Added a method to choose a starting double for the game
+Optimized code for each method using the game object
+Changed parameters in the classes to use the game object and its components where possible
+Added basic game class (extending game) and transferred game specific methods to that class
+Added game class and transferred methods to the class
+Removed original number of players method, no longer necessary with new switch case
+Added documentation to the domino class
+Removed the duplicate method for checking if the domino was a double in the domino class
+Game modified to allow the player a second discard if they play a double
+Method to determine if the domino is a double added
+Methods for each existing game option created
+Method to pick different game options created
+Two player game with one user and one computer added
+Method added to allow user to choose domino from their hand
+Domino choosing method modified to specify computer player functionality, intented to be separate from the user choice option 
+Needs user interaction for game (i.e. play against computers)
+Needs three and four player game functionality
+Method to determine whether a domino list is empty added
+Created choose domino method for game play
+Two player game functionality added
+Method to choose random domino added (for draw method and player hand creation)
+Modified displayDomino method for readability
+Method to add face value of all dominos in a hand added
+Method to draw another domino added
+Standard documentation added
+User input for number of players added
+User input for domino set size added
+Domino set and player sets moved to individual methods
+Program creates and prints player hands
+Program creates Domino 
+Created accessors and other necessary methods to use the Domino object
+Created Domino object
+Created Domino class
+
+
 Version 4.0 - 5/24/20
 Optimized code for each method using the game object
 Changed parameters in the classes to use the game object and its components where possible

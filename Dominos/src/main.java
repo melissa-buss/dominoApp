@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
-
+/**
+ * 
+ * 
+ * @author Melissa Buss
+ * @version 4.1
+ * @since 5/29/20
+ *
+ */
 public class main {
 
 	
@@ -8,7 +15,6 @@ public class main {
 	public static void main(String[] args) {
 		
 		runGame();
-        
     }
 	
 	/** 

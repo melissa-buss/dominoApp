@@ -1,4 +1,11 @@
-
+/**
+ * 
+ * 
+ * @author Melissa Buss
+ * @version 4.1
+ * @since 5/29/20
+ *
+ */
 public class Domino {
 	int left;
     int right;
