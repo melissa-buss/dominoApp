@@ -6,8 +6,8 @@ import java.util.Random;
  * 
  * 
  * @author Melissa Buss
- * @version 4.1
- * @since 5/29/20
+ * @version 5.0
+ * @since 6/29/20
  *
  */
 public class game {
@@ -177,6 +177,39 @@ public class game {
 		this.gameTrack = t;
 	}
 		
+	/** 
+	 * Creates a player hand.
+	 * 	
+	 * @param numInHand The number of dominos the player should draw
+	 * @param s 		The set of dominos that are not yet drawn
+	 * @return 			The player's hand
+	 */
+	public ArrayList<Domino> createPlayerHand(int numInHand, ArrayList<Domino> s) {
+		ArrayList<Domino> p = new ArrayList<>();
+		
+	    int i = 0;
+	    while (i < numInHand){
+	        p.add(chooseRandomDomino());
+	        i++;
+	    }
+	    
+	    return p;
+	}
+
+	/**
+	 * Chooses a random domino out of the set, also removing it once it's chosen.
+	 * 
+	 * @return 		The domino chosen
+	 */
+	public Domino chooseRandomDomino() {
+		Random rand = new Random();
+		int randomIndex = rand.nextInt(dominoSet.size());
+		Domino r = dominoSet.get(randomIndex);
+	    dominoSet.remove(randomIndex);
+	    
+	    return r;		
+	}
+
 	/**
 	 * Prints set to the screen for user to see.
 	 * 
@@ -202,40 +235,6 @@ public class game {
 			    continue;
 			}
 		}
-		System.out.println();
-	}
-	
-	/**
-	 * Chooses a random domino out of the set, also removing it once it's chosen.
-	 * 
-	 * @return 		The domino chosen
-	 */
-	public Domino chooseRandomDomino() {
-		Random rand = new Random();
-		int randomIndex = rand.nextInt(dominoSet.size());
-		Domino r = dominoSet.get(randomIndex);
-        dominoSet.remove(randomIndex);
-        
-        return r;		
-	}
-	
-	/** 
-	 * Creates a player hand.
-	 * 	
-	 * @param numInHand The number of dominos the player should draw
-	 * @param s 		The set of dominos that are not yet drawn
-	 * @return 			The player's hand
-	 */
-	public ArrayList<Domino> createPlayerHand(int numInHand, ArrayList<Domino> s) {
-		ArrayList<Domino> p = new ArrayList<>();
-		
-        int i = 0;
-        while (i < numInHand){
-            p.add(chooseRandomDomino());
-            i++;
-        }
-        
-        return p;
 	}
 	
 	/**

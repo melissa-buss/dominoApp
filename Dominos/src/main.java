@@ -4,16 +4,14 @@ import java.util.Scanner;
  * 
  * 
  * @author Melissa Buss
- * @version 4.1
+ * @version 5.0
  * @since 5/29/20
  *
  */
 public class main {
-
-	
 	
 	public static void main(String[] args) {
-		
+		System.out.println(5%4);
 		runGame();
     }
 	
@@ -56,8 +54,9 @@ public class main {
         		g.chooseNumOfPlayers();
         		return g;
         	case 2:
-        		System.out.println("Coming soon!");
-        		return e;
+        		mexicanTrain t = new mexicanTrain(size);
+        		t.chooseNumOfPlayers();
+        		return t;
         	default:
         		System.out.println("Invalid. Ending now.");
         		return e;
